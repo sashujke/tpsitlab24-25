@@ -1,0 +1,129 @@
+1. pwd:Stampa il percorso assoluto della directory di lavoro corrente.
+2. Comando bc attiva una calcolatrice interattiva. Si utilizzano i soliti simboli per le 4 operazioni, % per il resto
+della divisione , ^per elevamento a potenza e le () per ordinare le operazioni. Per uscire a riga nuova digitare
+quit o Crtl+d.
+3. Comando echo. Questo comando farà visualizzare un messaggio o generare i risultati di altri comandi.
+4. Comando date, visualizza ora e data correnti.
+5. Comando tty. Visualizza il terminale corrente.
+6. Comando whoami l’utente che è attualmente connesso.
+7. Opzioni help. Con quasi tutti i comandi, l’opzione ‘- -help’
+mostra il riepilogo dell’utilizzo.
+8. Comando man. Questo comando permette all’utente di ottenere informazioni sulla sintassi dei comandi.
+9. ls
+Descrizione: Elenca il contenuto di una directory. Se non viene specificata una directory, elenca il contenuto
+della directory corrente.
+Opzioni principali:
+• -a: Elenca anche i file nascosti (quelli il cui nome inizia con un punto).
+• -l: Elenco dettagliato, che include permessi, proprietari, dimensioni, data e nome del file.
+• -R: Elenca ricorsivamente il contenuto delle sottodirectory.
+• -s: Mostra la dimensione dei file.
+• -S: Ordina i file per dimensione, dal più grande al più piccolo.
+10.cd
+Descrizione: Cambia la directory di lavoro.
+Esempi:
+• cd ..: Torna alla directory superiore.
+• cd: Torna alla home directory.
+• cd /etc: Si sposta nella directory /etc.
+11.mkdir
+Descrizione: Crea una nuova directory.
+Opzione principale:
+• -p: Crea la directory, inclusi tutti i genitori necessarie.
+12.cp
+Descrizione: Copia file o directory(Se una directory deve essere copiata, deve essere copiata in modoricorsivo
+con i file in essa contenuti. Per copiare ricorsivamente una directory, usa l’opzione -r con il comando ‘cp’:).
+Opzioni principali:
+• -r: Copia ricorsivamente, necessario per copiare directory.
+• -i: Interattivo; chiede conferma prima di sovrascrivere file esistenti.
+• -f: Forza la sovrascrittura senza chiedere conferma.
+13.mv
+Descrizione: Sposta o rinomina file e directory.
+Opzioni principali:
+• -i: Chiede conferma prima di sovrascrivere file esistenti.
+• -f: Forza la sovrascrittura senza conferma.
+Esempi:
+• mv documento.txt ~/prova: Sposta il file documento.txt nella directory prova.
+• mv vecchio_nome nuovo_nome: Rinomina il file vecchio_nome in nuovo_nome.
+14.rm
+Descrizione: Rimuove file o directory(altrimenti rmdir, ma la directory deve essere vuota e non quella di
+lavoro corrente).
+Opzioni principali:
+• -r: Rimuove ricorsivamente una directory e tutto il suo contenuto.
+• -i: Chiede conferma prima di cancellare ogni file.
+• -f: Forza la cancellazione senza conferma.
+Esempi:
+• rm documento.txt: Rimuove il file documento.txt.
+• rm -r prova: Rimuove la directory prova e tutto il suo contenuto.
+15.chmod
+Descrizione: Modifica i permessi di file o directory.
+La stringa dei permessi in Linux è composta da 10 caratteri e si presenta così:
+• Primo carattere: Indica il tipo di file:
+• -: File normale.
+• d: Directory.
+• l: Link simbolico.
+• c: File a caratteri (es. terminali).
+• b: File a blocchi (es. dischi rigidi).
+• Successivi 9 caratteri: Divisi in tre gruppi di tre, rappresentano i permessi per:
+• Utente proprietario (u).
+• Gruppo proprietario (g).
+• Altri utenti (o).
+Sintassi: chmod [OPZIONI] permessi file.
+Ricerca e gestione dei file
+1. touch. Per creare un file vuoto.
+2. Cat: Visualizza il contenuto di un file.oppure è possibile concatenare più file accodandoli per poter
+visualizzare il loro contenuto.Ridirigendo l’output si può usare il comando cat per concatenare ifile, il loro
+contenuto viene copiato in un nuovo file.
+Si possono ridirigere i flussi standard su file mediante gli operatori di ridirezione:
+>file considera il file come standard output
+>>file considera il file come standard output ma aggiunge i dati in
+coda al file.
+>&file considera il file come standard output e standard error.
+<file considera il file come standard input.
+3. find
+Descrizione: Cerca file all'interno di una directory e delle sue sottodirectory.
+Sintassi: find [directory] [opzioni] [condizioni]
+Opzioni principali:
+• -name: Cerca file con un determinato nome.
+• -perm: Cerca file con permessi specifici.
+Esempi:
+• find . -name '*.txt': Cerca tutti i file con estensione .txt nella directory corrente.
+4. Il comando sort. Ordina i dati contenuti in un file. Ordina le righe di un
+file e le scrive ordinate sullo standard output. Di default l’ordinamento è
+alfabetico. Le principali opzioni sono: -o specifica il nome di un file di
+output -u elimina le ripetizioni; -f non tiene conto di maiuscole e minuscole; -n richiede
+l’ordinamento numerico; -r inverte il senso dei confronti.
+Sintassi: sort -o filedestinazione filesoregente;
+5. grep
+Descrizione: Cerca una stringa di testo all'interno di uno o più file.
+Opzioni principali:
+• -i: Ignora le differenze tra maiuscole e minuscole.
+• -v: Mostra solo le righe che non contengono la stringa cercata.
+• -c: Conta il numero di righe che corrispondono.
+Esempi:
+• grep "gatto" paperino.txt: Cerca la parola "gatto" all'interno del file paperino.txt.
+• grep -i "gatto" paperino.txt: Cerca "gatto" ignorando maiuscole/minuscole.
+6. Wc
+Descrizione: Conta righe, parole e caratteri in un file.
+Opzioni principali:
+• -l: Conta solo il numero di righe.
+• -w: Conta solo il numero di parole.
+• -c: Conta solo il numero di caratteri.
+Esempi:
+• wc documento.txt: Conta righe, parole e caratteri in documento.txt.
+• wc -l documento.txt: Conta solo le righe in documento.txt.
+7. Comando join. Congiunge due file secondo valori uguali presenti nelle righe. Il comando utilizza, salvo
+diversa specificazione, il primo campo di ciascun file per effettuare la congiunzione secondo valori uguali
+presenti nelle righe dei due file. I valori dei campi che vengonocongiunti devono essere ordinati secondo il
+codice ASCII. I valori uguali compaiono una sola volta nelle righe del file di output.
+8. Comando paste. Unisce due file riga per riga. A differenza del comando join, questo comando affianca
+ciascuna riga del primo file a ciascuna riga del secondo file, riga per riga.
+9. La Pipe
+La pipe è un meccanismo di comunicazione tra due processi che permette di utilizzare l’output di un comando
+come input per un altro. I comandi vanno separati dal simbolo |; l’output generato dal comando a sinistra della
+pipe diventa l’input per il comando alla destra.
+Es. si vogliono visualizzare i file che contengono il carattere i. Per separare il tipo di file di interesse si utilizza
+il comando grep. Vogliamo trovare i file che hanno il carattere “i” nel loro nome file o estensione del file.
+Useremo il carattere speciale della shell “|“ Per convogliare l'uscita da ls in grep.
+10.Nelle pipeline è utile talvolta salvare il flusso di dati che passa da un comando ad un altro memorizzandolo in
+un file. Questo è possibile con l’uso del comando tee. Il comando si chiama così perché realizza delle
+congiunzioni a T. Il comando cattura, copiandolo su file, il flusso di dati della pipeline senza compromettere il
+flusso stesso.
