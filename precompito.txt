@@ -1,0 +1,30 @@
+Esercitazione in praparazione alla verifica
+1. creare nella propria home directory una directory di nome prova
+2. cambiare i diritti di prova facendo in modo che il proprietario
+possa fare tutto, il gruppo possa solo leggerla e tutti gli altri non
+possano fare nulla.
+3. Supponendo che all’interno esista un file chiamato
+documento.txt, scrivere il comando per copiarlo nella directory
+prova
+4. modificare i diritti del file documento.txt per renderlo
+pienamente accessibile a tutti gli utenti del sistema
+5. creare un file pluto.txt, memorizzare al suo interno una serie di
+nomi.
+6. fare in modo che il file paperino.txt abbia il medesimo contenuto
+di pluto.txt
+7. Qual è il comando per cercare la parola gatto all’interno del file
+paperino.txt
+8. Elencare i file in una directory e ordinarli
+9. Elenca i file nella directory corrente e allo stesso tempo scrive
+l&#39;output nel file elenco.txt e lo mostra a video.:
+10. Dati i file
+
+file1.txt file2.tx file3.txt
+1 Alice 1 25 Alice 25
+2 Bob 2 34 Bob 34
+3 Charlie 3 22 Charlie 22
+Motivare su quali file è possibile effettuare il join e scrivere i relativi
+comandi
+
+11. join
+12. Scrivere il comando per eliminare la cartella prova
