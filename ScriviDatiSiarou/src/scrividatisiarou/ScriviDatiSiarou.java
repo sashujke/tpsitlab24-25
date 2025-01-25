@@ -36,5 +36,31 @@ public class ScriviDatiSiarou {
     catch (Exception e) {
         System.out.println ("Error" + e.getMessage());
 }
+
+    
+    try {
+        FileInputStream f = new FileInputStream ("elenco.dat");
+        ObjectInputStream fIN = new ObjectInputStream(f);
+        
+        
+        while (true)
+        {
+            try {
+                p1 = (Persona) fIN.readObject();
+                System.out.prinltn("Nome: " + p1.nome);
+                System.out.prinltn("cognome: " + p1.cognome);
+                System.out.prinltn(p1.eta + "eta: ");
+
+            }
+            catch (EOFException e) {
+                break;
+            }
+        }
+        f.close();
+  }
+    catch (Exception e) {
+            System.out.println ("Eccezione" + e.getMessage());
+}
+  
 }
 }
